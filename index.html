@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comments Generator</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <!--        <div class="col-md">-->
+        <!--            <h2>Bootcamp Feedback</h2>-->
+        <!--            <form>-->
+        <!--                <input type="radio" id="se" name="bootcamp" value="se" class="option-input radio">-->
+        <!--                <label for="se">SE</label><br>-->
+
+        <!--                <input type="radio" id="wd" name="bootcamp" value="wd" class="option-input radio">-->
+        <!--                <label for="wd">WD</label><br>-->
+
+        <!--                <input type="radio" id="ds" name="bootcamp" value="ds" class="option-input radio">-->
+        <!--                <label for="ds">DS</label>-->
+        <!--            </form>-->
+        <!--        </div>-->
+        <div class="col-md">
+            <h2>Feedback Count</h2>
+            <form>
+                <label for="positive"></label>
+                <input type="number" id="positive" name="positive" placeholder="Positive Feedback" class="form"><br>
+
+                <label for="negative"></label>
+                <input type="number" id="negative" name="negative" placeholder="Aspects To Improve:" class="form"><br>
+
+                <label for="overall"></label>
+                <input type="number" id="overall" name="overall" placeholder="Overall Feedback:" class="form"><br>
+            </form>
+        </div>
+
+        <div class="col-md">
+            <h2>Resubmit?</h2>
+            <form>
+                <input type="radio" id="resubyes" name="resub" value="yes" class="option-input radio">
+                <label for="resubyes">Yes</label><br>
+
+                <input type="radio" id="resubno" name="resub" value="no" class="option-input radio">
+                <label for="resubno">No</label><br>
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <button onclick="generateFeedback()">Generate Feedback</button>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <h2>Positive Feedback</h2>
+        <hr>
+        <textarea id="postiveFeedback" rows="12" cols="15" disabled></textarea>
+        <button id="copyPos" onclick="copyFeedback('pos')">Copy Text</button>
+    </div>
+    <div class="row">
+        <h2>Aspects To Improve</h2>
+        <hr>
+        <textarea id="negFeedback" rows="12" cols="15" disabled></textarea>
+        <button id="copyNeg" onclick="copyFeedback('neg')">Copy Text</button>
+    </div>
+    <div class="row">
+        <h2>Overall Feedback</h2>
+        <hr>
+        <textarea id="overallFeedback" rows="12" cols="15" disabled></textarea>
+        <button id="copyOver" onclick="copyFeedback('overall')">Copy Text</button>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
